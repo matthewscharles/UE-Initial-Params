@@ -9,8 +9,13 @@ USoundInitParamsBPLibrary::USoundInitParamsBPLibrary(const FObjectInitializer& O
 
 }
 
-float USoundInitParamsBPLibrary::SoundInitParamsSampleFunction(float Param)
+bool USoundInitParamsBPLibrary::TestFunction() {
+	float test = 0.1f;
+	return true;
+}
+
+FAudioParameter USoundInitParamsBPLibrary::SoundInitParamsSampleFunction(int32 Param)
 {
-	return -1;
+	const FAudioParameter AudioParameter(FName("Surface"), static_cast<int32>(Param));
 }
 

@@ -28,5 +28,9 @@ class USoundInitParamsBPLibrary : public UBlueprintFunctionLibrary
 	GENERATED_UCLASS_BODY()
 
 	UFUNCTION(BlueprintCallable, meta = (DisplayName = "Execute Sample function", Keywords = "SoundInitParams sample test testing"), Category = "SoundInitParamsTesting")
-	static float SoundInitParamsSampleFunction(float Param);
+	static FAudioParameter SoundInitParamsSampleFunction(int32 Param);
+
+	UFUNCTION(BlueprintCallable, meta = (DisplayName = "Test Function", Keywords = "SoundInitParams sample test testing"), Category = "SoundInitParamsTesting")
+	static bool TestFunction();
+
 };
